@@ -17,6 +17,7 @@ var happinessList = require('./happiness.js');
 var neutralList = require('./neutral.js');
 var sadessList = require('./sadness.js');
 var surpriseList = require('./surprise.js');
+var selfieUrl;
 
 
 
@@ -28,6 +29,7 @@ app.get('/', function (req, res) {
 
 io.on('connection', function(socket) { 
   socket.on('selfiePath', function (selfiePath) {
+    selfieUrl = selfiePath;
     console.log('face url: ' + selfiePath);
     client.emotion.analyzeEmotion({
       url: selfiePath,
@@ -44,28 +46,29 @@ io.on('connection', function(socket) {
       console.log(highScore);
       console.log(highEmotion);
       if (highEmotion == 'anger') {
-        console.log(angerList.pick());
+        socket.emit('catify', selfiePath, angerList.pick());
       }
       if (highEmotion == 'contempt') {
-        console.log(contemptList.pick());
+        socket.emit('catify', selfiePath, contemptList.pick());
       }
       if (highEmotion == 'disgust') {
-        console.log(disgustList.pick());
+        socket.emit('catify', selfiePath, disgustList.pick());
       }
       if (highEmotion == 'fear') {
-        console.log(fearList.pick());
+        socket.emit('catify', selfiePath, fearList.pick());
       }
       if (highEmotion == 'happiness') {
-        console.log(happinessList.pick());
+        socket.emit('catify', selfiePath, happinessList.pick());
       }
       if (highEmotion == 'neutral') {
-        console.log(neutralList.pick());
+        console.log('emitting for neutral');
+        socket.emit('catify', selfiePath, neutralList.pick());
       }
       if (highEmotion == 'sadness') {
-        console.log(sadnessList.pick());
+        socket.emit('catify', selfiePath, sadnessList.pick());
       }
       if (highEmotion == 'surprise') {
-        console.log(surpriseList.pick());
+        socket.emit('catify', selfiePath, surpriseList.pick());
       }
     });
   });
