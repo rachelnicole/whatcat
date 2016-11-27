@@ -15,7 +15,10 @@ socket.on('catify', function (selfiePath, response) {
 });
 
 
-function whichCat(response) {
+function whichCat(selfiePath, response) {
   console.log(response);
   $('<img>', { src: selfiePath }).appendTo('#selfie');
+  $('<img>', { src: response.breedImg }).appendTo('.breedImg');
+  $('.breedName').append(response.breedName);
+  $('.breedDesc').append(response.breedDesc);
 }
