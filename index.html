@@ -1,0 +1,24 @@
+<html>
+
+<head>
+  <title>Which cat are you?</title>
+</head>
+
+<body>
+<form action="javascript:submitUrl();">
+  <div>
+    <input type="url" id="selfiePath" placeholder="Please input the url of a photo of yourself.">
+    <input type="submit" value="Meow">
+  </div>
+</form>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+      var socket = io.connect('http://localhost:3030/');
+      function submitUrl() {
+        selfiePath = document.getElementById("selfiePath").value;
+        socket.emit('selfiePath', selfiePath);
+      }
+    </script>
+</body>
+
+</html>
