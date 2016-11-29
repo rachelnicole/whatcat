@@ -51,4 +51,13 @@ body {
   clear: both;
   display: block;
   color: #457B9D;
+  text-align: center;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.shown {
+  opacity: 1;
 }

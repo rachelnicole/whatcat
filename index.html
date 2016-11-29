@@ -6,8 +6,8 @@
 </head>
 
 <body>
+<h1 class="main-header">Which cat are you?</h1>
 <div id="kitty-container">
-  <h1 class="main-header">Which cat are you?</h1>
   <div class="selfie-wrapper">
     <div id="selfie">
       <img src="public/images/mystery.png">
@@ -25,13 +25,22 @@
     </div>
   </div>
   <div class="form-wrapper">
-    <form action="javascript:submitUrl();">
-      <div>
-        <input type="url" id="selfiePath" placeholder="Please input the url of a photo of yourself.">
-        <input id="submitButton" type="submit" value="Meow">
-      </div>
-    </form>
-    <div class="form-error"></div>
+    <div class="step-one shown">
+      <form action="javascript:submitUrl();">
+        <div>
+          <input type="url" id="selfiePath" placeholder="Please input the url of a photo of yourself.">
+          <input id="submitButton" type="submit" value="Meow">
+        </div>
+      </form>
+      <div class="form-error"></div>
+    </div>
+    <div class="step-two hidden">
+      <form action="javascript:startOver();">
+        <div>
+          <input id="redoButton" type="submit" value="Another?">
+        </div>
+      </form>
+    </div>
   </div>
 </div>
 
