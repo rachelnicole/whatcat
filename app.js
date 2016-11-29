@@ -51,29 +51,29 @@ io.on('connection', function(socket) {
       console.log(highScore);
       console.log(highEmotion);
       if (highEmotion == 'anger') {
-        socket.emit('catify', selfiePath, angerList.pick());
+        socket.emit('catify', highEmotion, selfiePath, angerList.pick());
       }
       if (highEmotion == 'contempt') {
-        socket.emit('catify', selfiePath, contemptList.pick());
+        socket.emit('catify', highEmotion, selfiePath, contemptList.pick());
       }
       if (highEmotion == 'disgust') {
-        socket.emit('catify', selfiePath, disgustList.pick());
+        socket.emit('catify', highEmotion, selfiePath, disgustList.pick());
       }
       if (highEmotion == 'fear') {
-        socket.emit('catify', selfiePath, fearList.pick());
+        socket.emit('catify', highEmotion, selfiePath, fearList.pick());
       }
       if (highEmotion == 'happiness') {
-        socket.emit('catify', selfiePath, happinessList.pick());
+        socket.emit('catify', highEmotion, selfiePath, happinessList.pick());
       }
       if (highEmotion == 'neutral') {
         console.log('emitting for neutral');
-        socket.emit('catify', selfiePath, neutralList.pick());
+        socket.emit('catify', highEmotion, selfiePath, neutralList.pick());
       }
       if (highEmotion == 'sadness') {
-        socket.emit('catify', selfiePath, sadnessList.pick());
+        socket.emit('catify', highEmotion, selfiePath, sadnessList.pick());
       }
       if (highEmotion == 'surprise') {
-        socket.emit('catify', selfiePath, surpriseList.pick());
+        socket.emit('catify', highEmotion, selfiePath, surpriseList.pick());
       }
     });
   });

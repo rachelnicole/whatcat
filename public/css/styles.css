@@ -17,7 +17,8 @@ body {
   width: 100%;
 }
 
-#catResult {
+#catResult,
+.yourEmotion {
   text-align: center;
 }
 
@@ -27,7 +28,9 @@ body {
 
 .breedImg,
 .breedName,
-.breedDesc {
+.breedDesc,
+.yourEmotion,
+#selfie {
   padding-bottom: 10px;
 }
 
