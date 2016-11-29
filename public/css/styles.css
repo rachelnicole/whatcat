@@ -13,6 +13,10 @@ body {
   max-width: 1000px;
 }
 
+.selfie-wrapper img {
+  width: 100%;
+}
+
 #catResult {
   text-align: center;
 }
