@@ -2,9 +2,9 @@
   "name": "whatcat",
   "version": "1.0.0",
   "description": "find out what cat you are based off your facial expression",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "node index.js"
+    "test": "node app.js"
   },
   "repository": {
     "type": "git",
