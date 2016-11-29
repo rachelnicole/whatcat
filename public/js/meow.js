@@ -1,4 +1,4 @@
-var socket = io.connect('http://localhost:3030/');
+var socket = io.connect('http://localhost:3000/');
 function submitUrl() {
   selfiePath = document.getElementById("selfiePath").value;
   $('#selfiePath').attr('disabled', true);
