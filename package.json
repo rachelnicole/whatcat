@@ -17,6 +17,9 @@
     "cats",
     "node"
   ],
+  "engines": {
+     "node": "6.6.0"
+  }, 
   "author": "Rachel White",
   "license": "ISC",
   "bugs": {
