@@ -8,7 +8,7 @@ var app = module.exports.app = express();
 var server = http.createServer(app);
 var io = require('socket.io').listen(server);
 var oxford = require('project-oxford');
-var client = new oxford.Client('process.env.oxford');
+var client = new oxford.Client('23fae0648e74431388964ed07938c6ec');
 var angerList = require('./anger.js');
 var contemptList = require('./contempt.js');
 var disgustList = require('./disgust.js');
