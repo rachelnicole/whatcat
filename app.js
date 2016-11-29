@@ -5,6 +5,7 @@ Array.prototype.pick = function() {
 var http = require('http');
 var express = require('express');
 var app = module.exports.app = express();
+var port = process.env.PORT || 3000;
 var server = http.createServer(app);
 var io = require('socket.io').listen(server);
 var oxford = require('project-oxford');
@@ -78,4 +79,4 @@ io.on('connection', function(socket) {
   });
 });
 
-server.listen(3000);
+server.listen(port);
