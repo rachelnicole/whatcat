@@ -1,0 +1,54 @@
+body {
+  background-color: #EAFFFC;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  width: 100%;
+}
+
+#kitty-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+#catResult {
+  text-align: center;
+}
+
+.form-wrapper {
+  padding: 15px 0;
+}
+
+.breedImg,
+.breedName,
+.breedDesc {
+  padding-bottom: 10px;
+}
+
+.form-wrapper {
+  width: 100%;
+}
+
+#selfiePath {
+  display: inline-block;
+  width: 75%;
+}
+
+#submitButton {
+  display: inline-block;
+  width: 23%;
+}
+
+.kitty-wrapper,
+.selfie-wrapper {
+  height: 600px;
+  max-width: 50%;
+}
+
+.main-header { 
+  clear: both;
+  display: block;
+  color: #457B9D;
+}

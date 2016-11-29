@@ -14,6 +14,10 @@ socket.on('catify', function (selfiePath, response) {
   }
 });
 
+socket.on('nohface', function() {
+  $('.form-error').append('sorry we were unable to detect a face, please make sure all features are unobstructed');
+});
+
 
 function whichCat(selfiePath, response) {
   console.log(response);

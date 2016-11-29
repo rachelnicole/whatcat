@@ -2,25 +2,40 @@
 
 <head>
   <title>Which cat are you?</title>
+  <link rel="stylesheet" href="public/css/styles.css">
 </head>
 
 <body>
-<div id="selfie">
-</div>
-<div id="catResult">
-    <div class="breedName">
+<div id="kitty-container">
+  <h1 class="main-header">Which cat are you?</h1>
+  <div class="selfie-wrapper">
+    <div id="selfie">
+      <img src="public/images/mystery.png">
     </div>
-    <div class="breedDesc">
-    </div>
-    <div class="breedImg">
-    </div>
-</div>
-<form action="javascript:submitUrl();">
-  <div>
-    <input type="url" id="selfiePath" placeholder="Please input the url of a photo of yourself.">
-    <input type="submit" value="Meow">
   </div>
-</form>
+  <div class="kitty-wrapper">
+    <div id="catResult">
+      <div class="breedImg">
+        <img src="public/images/mystery.png">
+      </div>
+      <div class="breedName">
+      </div>
+      <div class="breedDesc">
+      </div>
+    </div>
+  </div>
+  <div class="form-wrapper">
+    <form action="javascript:submitUrl();">
+      <div>
+        <input type="url" id="selfiePath" placeholder="Please input the url of a photo of yourself.">
+        <input id="submitButton" type="submit" value="Meow">
+      </div>
+    </form>
+    <div class="form-error"></div>
+  </div>
+</div>
+
+</div>
   <script src="/socket.io/socket.io.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
   <script src="public/js/meow.js"></script>

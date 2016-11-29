@@ -34,6 +34,10 @@ io.on('connection', function(socket) {
     client.emotion.analyzeEmotion({
       url: selfiePath,
     }).then(function (response) {
+      if (response.length == 0) {
+        socket.emit('nohface');
+        return;
+      }
       var emotionScores = response[0].scores;
       var highScore = 0;
       var highEmotion;
