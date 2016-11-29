@@ -2,12 +2,11 @@ Array.prototype.pick = function() {
   return this[Math.floor(Math.random()*this.length)];
 };
 
-var http = require('http');
 var express = require('express');
 var app = module.exports.app = express();
-var port = process.env.PORT || 3000;
-var server = http.createServer(app);
+var server = require('http').createServer(app);
 var io = require('socket.io').listen(server);
+var port = process.env.PORT || 3000;
 var oxford = require('project-oxford');
 var client = new oxford.Client(process.env.OXFORD);
 var angerList = require('./anger.js');
@@ -20,7 +19,7 @@ var sadessList = require('./sadness.js');
 var surpriseList = require('./surprise.js');
 var selfieUrl;
 
-console.log(process.env.OXFORD);
+server.listen(port);
 
 app.use('/public', express.static('public'));
 
@@ -78,5 +77,3 @@ io.on('connection', function(socket) {
     });
   });
 });
-
-server.listen(port);
