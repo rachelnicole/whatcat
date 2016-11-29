@@ -20,7 +20,6 @@ var sadessList = require('./sadness.js');
 var surpriseList = require('./surprise.js');
 var selfieUrl;
 
-
 console.log(process.env.OXFORD);
 
 app.use('/public', express.static('public'));
