@@ -10,7 +10,7 @@
 <div id="kitty-container">
   <div class="selfie-wrapper">
     <div id="selfie">
-      <img src="public/images/mystery.png">
+      <img src="public/images/mystery.png" alt="selfie placeholder">
     </div>
     <div class="yourEmotion">
     </div>
@@ -18,7 +18,7 @@
   <div class="kitty-wrapper">
     <div id="catResult">
       <div class="breedImg">
-        <img src="public/images/mystery.png">
+        <img src="public/images/mystery.png" alt="cat placeholder">
       </div>
       <div class="breedName">
       </div>
@@ -30,6 +30,9 @@
     <div class="step-one shown">
       <form action="javascript:submitUrl();">
         <div>
+          <label for="selfiePath">
+              Selfie URL:
+          </label>
           <input type="url" id="selfiePath" placeholder="Please input the url of a photo of yourself.">
           <input id="submitButton" type="submit" value="Meow">
         </div>
