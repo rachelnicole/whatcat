@@ -85,3 +85,7 @@ input[type="url"] {
   max-height: 500px;
   overflow: hidden;
 }
+
+label {
+  display: block;
+}
