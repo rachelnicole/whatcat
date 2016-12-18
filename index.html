@@ -9,8 +9,10 @@
 <h1 class="main-header">Which cat are you?</h1>
 <div id="kitty-container">
   <div class="selfie-wrapper">
-    <div id="selfie">
-      <img src="public/images/mystery.png" alt="selfie placeholder">
+    <div id="selfie" style='position:relative;'>
+      <span style='left:0%;right:0%;bottom:0%;position:absolute;background:#EAFFFC;padding:5px;text-align:center;'>Click to use your webcam</span>
+      <img id='placeholder' src="public/images/mystery.png" alt="selfie placeholder">
+      <div id='webcam'></div>
     </div>
     <div class="yourEmotion">
     </div>
