@@ -6,6 +6,24 @@
 </head>
 
 <body>
+
+	<script src="public/js/webcam.js"></script>
+
+	<div id="my_camera" style="width:320px; height:240px;"></div>
+	<div id="my_result"></div>
+
+	<script language="JavaScript">
+		Webcam.attach( '#my_camera' );
+		
+		function take_snapshot() {
+			Webcam.snap( function(data_uri) {
+				document.getElementById('my_result').innerHTML = '<img src="'+data_uri+'"/>';
+			} );
+		}
+	</script>
+
+	<a href="javascript:void(take_snapshot())">Take Snapshot</a>
+
 <h1 class="main-header">Which cat are you?</h1>
 <div id="kitty-container">
   <div class="selfie-wrapper">
