@@ -46,6 +46,7 @@ body {
 #submitButton {
   display: inline-block;
   width: 23%;
+  
 }
 
 .kitty-wrapper,
@@ -88,4 +89,13 @@ input[type="url"] {
 
 label {
   display: block;
+}
+
+button.snapshot {
+    border: 3px solid #457B9D;
+    font-size: 16px;
+    padding: 15px;
+    background-color: white;
+    float: left;
+    margin-right: 200px;
 }

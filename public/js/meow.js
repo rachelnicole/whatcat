@@ -37,9 +37,9 @@ if (navigator.getUserMedia) {
         var video = $('<video></video>')
           .attr('width', 500)
             .appendTo($('.selfie-wrapper'))[0];
-        var take = $('<button></button>')
-          .text('Click!')
-          .appendTo($('.selfie-wrapper'))
+        var take = $('<button class="snapshot"></button>')
+          .text('Click to take a pic!')
+          .prependTo($('.step-one'))
           .on('click', takepicture);
          var video = document.querySelector('video');
          video.srcObject = stream;
@@ -67,19 +67,20 @@ function submitUrl() {
 };
 
 function startOver() {
-  $('#selfiePath').attr('disabled', false);
-  $('#selfiePath').val('');
-  $('#submitButton').prop('disabled', false);
-  $('.step-one').addClass('shown').removeClass('hidden');
-  $('.step-two').addClass('hidden').removeClass('shown');
-  $('#selfie').empty();
-  $('.breedImg').empty();
-  $('.yourEmotion').empty();
-  $('.breedName').empty();
-  $('.breedDesc').empty();
-  $('<img>', { src: 'public/images/mystery.png' }).appendTo('#selfie');
-  $('<img>', { src: 'public/images/mystery.png' }).appendTo('.breedImg');
-  $('.form-error').empty();
+  // $('#selfiePath').attr('disabled', false);
+  // $('#selfiePath').val('');
+  // $('#submitButton').prop('disabled', false);
+  // $('.step-one').addClass('shown').removeClass('hidden');
+  // $('.step-two').addClass('hidden').removeClass('shown');
+  // $('#selfie').empty();
+  // $('.breedImg').empty();
+  // $('.yourEmotion').empty();
+  // $('.breedName').empty();
+  // $('.breedDesc').empty();
+  // $('<img>', { src: 'public/images/mystery.png' }).appendTo('#selfie');
+  // $('<img>', { src: 'public/images/mystery.png' }).appendTo('.breedImg');
+  // $('.form-error').empty();
+  window.location.reload(true);
 
 };
 

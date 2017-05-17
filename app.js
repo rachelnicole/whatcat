@@ -9,7 +9,6 @@ var server = require('http').createServer(app);
 var io = require('socket.io').listen(server);
 var port = process.env.PORT || 3000;
 var oxford = require('project-oxford');
-console.log(process.env.OXFORD);
 var client = new oxford.Client(process.env.OXFORD);
 var angerList = require('./anger.js');
 var contemptList = require('./contempt.js');
@@ -33,8 +32,11 @@ io.on('connection', function(socket) {
 
   socket.on('selfiePath', function (selfiePath) {
     selfieUrl = selfiePath;
+    var data = selfieUrl.replace(/^data:image\/\w+;base64,/, "");
+    var buf = new Buffer(data, 'base64');
+    fs.writeFileSync('public/image.png', buf);
     client.emotion.analyzeEmotion({
-      url: selfiePath,
+      path: 'public/image.png',
     }).then(handleResponse, handleError);
   });
 
