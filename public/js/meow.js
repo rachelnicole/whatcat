@@ -26,7 +26,7 @@ function takepicture() {
   var img = $('<img></img>')
     .appendTo($('#selfie').html(''))
     .attr('src', data);
-  socket.emit('selfieData', data);
+  socket.emit('selfiePath', data);
 }
 
 if (navigator.getUserMedia) {
