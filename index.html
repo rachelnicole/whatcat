@@ -7,17 +7,6 @@
 
 <body>
 
-	<script src="public/js/webcam.js"></script>
-	<script language="JavaScript">
-		Webcam.attach( '#my_camera' );
-		
-		function take_snapshot() {
-			Webcam.snap( function(data_uri) {
-				document.getElementById('my_result').innerHTML = '<img src="'+data_uri+'"/>';
-			} );
-		}
-	</script>
-
 <h1 class="main-header">Which cat are you?</h1>
 <div id="kitty-container">
   <div class="selfie-wrapper">
@@ -27,8 +16,6 @@
       <div id='webcam'></div>
     </div>
     <div class="yourEmotion">
-      <div id="my_camera" style="width:320px; height:240px;"></div>
-	    <div id="my_result"></div>
     </div>
   </div>
   <div class="kitty-wrapper">
@@ -44,7 +31,6 @@
   </div>
   <div class="form-wrapper">
     <div class="step-one shown">
-      <a href="javascript:void(take_snapshot())">Take Snapshot</a>
       <form action="javascript:submitUrl();">
         <div>
           <label for="selfiePath">
